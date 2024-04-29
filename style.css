@@ -1,0 +1,419 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+
+    font-family: "Poppins", sans-serif;
+    height: 200vh;
+
+}
+
+.container {
+    background-color: black;
+    color: #fff
+}
+
+/* NAVBARR */
+.navbar {
+
+    background-color: black;
+    color: white;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.logo {
+    color: rgb(255, 70, 70);
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+
+
+}
+
+.logo:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+
+
+.menu-list {
+    display: flex;
+    gap: 50px;
+    padding: 0;
+}
+
+.menu-list-item {
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+
+}
+
+.active {
+    font-weight: bold;
+}
+
+.menu-list-item:hover {
+    color: rgb(255, 70, 70);
+    transform: scale(1.1);
+
+
+}
+
+/* HESABIM AREA */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+}
+
+.profile-container img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+
+}
+
+.profile-text-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    line-height: 1;
+}
+
+.toogle-icon {
+    color: goldenrod;
+}
+
+
+.toogle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    width: 50px;
+    height: 25px;
+
+    background-color: white;
+    padding: 5px;
+    border-radius: 30px;
+
+
+
+
+
+}
+
+.toogle-ball {
+    width: 18;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    right: 4px;
+    transition: .5s ease all;
+
+
+}
+
+/* SİDE BAR AREA */
+.sidebar {
+    background-color: black;
+    color: white;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    row-gap: 40px;
+    position: fixed;
+
+}
+
+.sidebar i:hover {
+    transform: scale(1.3);
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    color: red;
+}
+
+/* Content area */
+
+.content-wrapper {
+    margin-left: 50px;
+}
+
+.featured-content {
+    background: url(images/spiderman.jpg);
+    height: calc(100vh - 50px);
+    padding: 50px;
+    background-size: 100% 100%;
+}
+
+.featured-title {
+    width: 400px;
+    
+}
+
+.featured-desc {
+    width: 500px;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 10px;
+    margin: 30px 0;
+    color: black;
+}
+
+.featured-buttons {
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+   
+}
+
+.featured-buttons button {
+    padding: 10px 25px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    column-gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+
+}
+
+.featured-buttons .info-button {
+    background-color: rgb(145, 142, 142, 0.5);
+}
+
+.featured-buttons .info-button:hover {
+    transform: scale(1.07);
+    background-color: #fff;
+
+}
+
+.featured-buttons .play-button:hover {
+    transform: scale(1.07);
+}
+
+/* .featured-buttons i {
+    margin-right: 5px;
+
+} */
+
+/* filter start */
+
+.movie-list-filter {
+    margin: 20px 0 20px 50px;
+    padding: 20px;
+}
+
+.movie-list-filter select {
+    background-color: black;
+    color: white;
+    padding: 7px 3px;
+    width: 125px;
+}
+
+/* movie list start */
+
+.movie-list-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-list-container {
+    margin-left: 70px;
+}
+
+.movie-list {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    transform: translateX(0);
+    transition: 1s  all ease-in-out;
+
+}
+
+.movie-item-img {
+    width: 290px;
+    height: 200px;
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+
+
+}
+
+.movie-item-title {
+    background-color: rgb(40, 40, 40, 0.5);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: 600;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+
+}
+
+.movie-list-item {
+    position: relative;
+
+
+}
+
+.movie-list-item:hover .movie-item-title,
+.movie-list-item:hover .movie-item-buttons {
+    opacity: 1;
+    transition: all 0.6s ease;
+    cursor: pointer;
+
+
+}
+
+.movie-list-item:hover .movie-item-img {
+
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-item-buttons {
+    background-color: rgb(40, 40, 40, 0.5);
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+
+
+}
+
+.movie-item-buttons i {
+    cursor: pointer;
+    opacity: 0.5;
+    font-size: 20px;
+}
+
+.movie-item-buttons i:hover {
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.arrow {
+    width: 100px;
+    font-size: 120px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top:100px;
+    opacity: .5;
+    transition: all .5s ease;
+   
+  
+}
+.arrow:hover{
+    opacity: 1;
+    cursor: pointer;
+  
+}
+
+/* dark mode start  */
+
+.container.active{
+    background-color: #fff;
+}
+
+.sidebar.active{
+    background-color: #fff;
+ 
+}
+.sidebar i.active{
+    color: black;
+}
+.navbar.active{
+    background-color: #fff;
+    color: black;
+}
+.toogle.active{
+    background-color: black;
+}
+.toogle-ball.active{
+    background-color: white;
+    transform:translateX(-23px);
+}
+
+.movie-list-filter select.active{
+    background-color: #fff;
+    color: black;
+    
+
+}
+.movie-list-title.active{
+    color:black
+}
+
+/* responsive start */
+
+@media only screen and (max-width:800px){
+    .menu-container{
+        display: none;
+    }
+    .featured-content{
+        height: 50vh;
+    }
+    .featured-title{
+        width: 200px;
+
+    }
+    .featured-desc{
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        max-width: 200px;
+        padding: 0;
+    }
+}
